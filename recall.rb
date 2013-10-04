@@ -68,7 +68,6 @@ put '/:id' do
   else
     redirect '/', flash.next[:error] = "Error updating note."
   end
-  redirect '/'
 end
 
 get '/:id/delete' do
@@ -84,7 +83,6 @@ delete '/:id' do
   else
     redirect "/", flash.next[:error] = "Error deleting note."
   end
-  redirect '/'
 end
 
 get "/:id/complete" do
